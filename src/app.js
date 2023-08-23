@@ -40,4 +40,8 @@ app.use((req, res) => {
     res.status(404).send("Not Foud :C")
 })
 
-app.listen(3000, 'localhost')
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`server started on port ${PORT}`);
+});
